@@ -10,24 +10,27 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
 
-  <!-- Seu CSS -->
-  <link rel="stylesheet" href="styles.css" />
-  
   <style>
     /* Estilo para o fundo da seção inicial */
     .inicio-fundo {
       background-color: #2c3e50; /* azul escuro */
       min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 3rem;
     }
 
-    /* Opcional: ajustar o botão link para parecer botão */
+    /* Estilo para o botão link */
     .botao-inicio {
-      text-decoration: none;
       color: white;
+      text-decoration: none;
     }
 
     .botao-inicio:hover {
-      color: white;
       text-decoration: none;
       opacity: 0.9;
     }
@@ -46,7 +49,7 @@
       <!-- Botão de Acessibilidade -->
       <div id="acessibilidade" class="menu-acessibilidade">
         <button id="botao-acessibilidade" class="btn btn-primary fw-bold" aria-expanded="false">Acessibilidade</button>
-        <div id="opcoes-acessibilidade" class="opcoes-acessibilidade">
+        <div id="opcoes-acessibilidade" class="opcoes-acessibilidade" style="display:none;">
           <button id="aumentar-fonte" class="btn btn-sm btn-secondary">A+</button>
           <button id="diminuir-fonte" class="btn btn-sm btn-secondary">A-</button>
           <button id="alterna-contraste" class="btn btn-sm btn-dark"><i class="bi bi-shadows"></i></button>
@@ -55,8 +58,8 @@
     </nav>
   </header>
 
-  <!-- SEÇÃO INICIAL (sem imagens, com texto e botão) -->
-  <section id="inicio" class="inicio-fundo d-flex flex-column justify-content-center align-items-center text-center text-white p-5">
+  <!-- SEÇÃO INICIAL -->
+  <section id="inicio" class="inicio-fundo">
     <h1 class="display-4">Receitas Fitness</h1>
     <p>Este é o site da Nayara Vieira, dedicado a compartilhar receitas fitness simples, saborosas e nutritivas para ajudar você a manter uma alimentação saudável todos os dias.</p>
     <a href="#receitas" class="botao-inicio btn btn-lg btn-primary mt-4">Confira as Receitas</a>
@@ -65,48 +68,46 @@
   <main class="container my-5">
     <!-- Seção de Receitas Fitness -->
     <section id="receitas" class="my-5 secao-receitas">
-      <div class="container">
-        <h2 class="mb-4 text-center">Receitas Fitness da Nayara</h2>
-        <div class="row g-4">
-          <!-- Receita 1 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Salada de Quinoa com Abacate</h5>
-                <p class="card-text">Rica em proteínas e gorduras boas, ideal para uma refeição leve.</p>
-                <ul class="small">
-                  <li><strong>Ingredientes:</strong> Quinoa, abacate, tomate, pepino, azeite de oliva.</li>
-                  <li><strong>Modo de preparo:</strong> Cozinhe a quinoa e misture com os outros ingredientes.</li>
-                </ul>
-              </div>
+      <h2 class="mb-4 text-center">Receitas Fitness da Nayara</h2>
+      <div class="row g-4">
+        <!-- Receita 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Salada de Quinoa com Abacate</h5>
+              <p class="card-text">Rica em proteínas e gorduras boas, ideal para uma refeição leve.</p>
+              <ul class="small">
+                <li><strong>Ingredientes:</strong> Quinoa, abacate, tomate, pepino, azeite de oliva.</li>
+                <li><strong>Modo de preparo:</strong> Cozinhe a quinoa e misture com os outros ingredientes.</li>
+              </ul>
             </div>
           </div>
+        </div>
 
-          <!-- Receita 2 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Panqueca de Aveia e Banana</h5>
-                <p class="card-text">Perfeita para o café da manhã saudável, com aveia e banana.</p>
-                <ul class="small">
-                  <li><strong>Ingredientes:</strong> Aveia, banana, ovo, mel, canela.</li>
-                  <li><strong>Modo de preparo:</strong> Bata os ingredientes e asse em frigideira antiaderente.</li>
-                </ul>
-              </div>
+        <!-- Receita 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Panqueca de Aveia e Banana</h5>
+              <p class="card-text">Perfeita para o café da manhã saudável, com aveia e banana.</p>
+              <ul class="small">
+                <li><strong>Ingredientes:</strong> Aveia, banana, ovo, mel, canela.</li>
+                <li><strong>Modo de preparo:</strong> Bata os ingredientes e asse em frigideira antiaderente.</li>
+              </ul>
             </div>
           </div>
+        </div>
 
-          <!-- Receita 3 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Smoothie de Frutas Vermelhas</h5>
-                <p class="card-text">Refrescante, nutritivo e cheio de antioxidantes naturais.</p>
-                <ul class="small">
-                  <li><strong>Ingredientes:</strong> Morango, amora, iogurte natural, chia.</li>
-                  <li><strong>Modo de preparo:</strong> Bata tudo no liquidificador até ficar cremoso.</li>
-                </ul>
-              </div>
+        <!-- Receita 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Smoothie de Frutas Vermelhas</h5>
+              <p class="card-text">Refrescante, nutritivo e cheio de antioxidantes naturais.</p>
+              <ul class="small">
+                <li><strong>Ingredientes:</strong> Morango, amora, iogurte natural, chia.</li>
+                <li><strong>Modo de preparo:</strong> Bata tudo no liquidificador até ficar cremoso.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -137,9 +138,13 @@
       let fonteAtual = 16;
 
       botaoAcessibilidade.addEventListener("click", function () {
-        opcoes.classList.toggle("ativa");
-        const expanded = botaoAcessibilidade.getAttribute("aria-expanded") === "true";
-        botaoAcessibilidade.setAttribute("aria-expanded", !expanded);
+        if (opcoes.style.display === "none" || opcoes.style.display === "") {
+          opcoes.style.display = "block";
+          botaoAcessibilidade.setAttribute("aria-expanded", "true");
+        } else {
+          opcoes.style.display = "none";
+          botaoAcessibilidade.setAttribute("aria-expanded", "false");
+        }
       });
 
       aumentarFonte.addEventListener("click", function () {
