@@ -11,10 +11,11 @@
 }
 
 body {
-    font-size: 1rem;
+    font-size: 1rem; /* Fundamental para seu JS funcionar */
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     background-color: #fff;
+    color: #333; /* cor padrão do texto */
 }
 
 /* HEADER */
@@ -45,8 +46,10 @@ header {
     padding: 2rem;
     position: relative;
     overflow: hidden;
-    display: flex; /* Garantir flex para layout */
+    display: flex; /* Flex para layout */
     align-items: center;
+    color: white; /* texto branco para visibilidade */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* sombra para destacar o texto */
 }
 
 .esquerda-conteudo {
@@ -76,7 +79,7 @@ header {
     transform: scale(1.05);
 }
 
-/* imagem da direita */
+/* Imagem da direita */
 .img-inicio {
     max-width: 40%;
     height: auto;
@@ -157,6 +160,9 @@ footer i:hover {
     top: 2rem;
     right: 20px;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 /* Botão rotacionado quando ativado */
@@ -195,37 +201,37 @@ footer i:hover {
     color: #fff;
 }
 
-/* ALTO CONTRASTE */
-.alto-contraste {
+/* ALTO CONTRASTE - classe usada no JS: high-contrast */
+.high-contrast {
     background-color: var(--alto-contraste-fundo);
     color: var(--alto-contraste-texto);
 }
 
-.alto-contraste header,
-.alto-contraste footer,
-.alto-contraste .formulario {
+.high-contrast header,
+.high-contrast footer,
+.high-contrast .formulario {
     background-color: var(--alto-contraste-fundo);
     color: var(--alto-contraste-texto);
 }
 
-.alto-contraste .nav-link {
+.high-contrast .nav-link {
     color: var(--alto-contraste-link);
     text-decoration: underline;
 }
 
-.alto-contraste .botao-inicio,
-.alto-contraste .formulario button,
-.alto-contraste .btn-primary {
+.high-contrast .botao-inicio,
+.high-contrast .formulario button,
+.high-contrast .btn-primary {
     background-color: var(--alto-contraste-link);
     color: var(--alto-contraste-fundo);
 }
 
-.alto-contraste #galeria,
-.alto-contraste .fundo-galeria {
+.high-contrast #galeria,
+.high-contrast .fundo-galeria {
     background: none;
 }
 
-/* RESPONSIVIDADE */
+/* Responsividade */
 @media (max-width: 992px) {
     .inicio-fundo {
         flex-direction: column;
