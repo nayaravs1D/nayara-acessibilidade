@@ -5,17 +5,19 @@
     --laranja-claro: #ee1313;
     --marrom: #e24e0a;
     --fundo-claro: #FAF4F4;
+
+    /* Alto contraste */
     --alto-contraste-fundo: #000000;
-    --alto-contraste-texto: #d12d2d;
+    --alto-contraste-texto: #ffffff;
     --alto-contraste-link: #ffd700;
 }
 
 body {
-    font-size: 1rem; /* Fundamental para seu JS funcionar */
+    font-size: 1rem; /* Fundamental para o JS de acessibilidade funcionar */
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     background-color: #fff;
-    color: #333; /* cor padrão do texto */
+    color: #333;
 }
 
 /* HEADER */
@@ -46,10 +48,10 @@ header {
     padding: 2rem;
     position: relative;
     overflow: hidden;
-    display: flex; /* Flex para layout */
+    display: flex;
     align-items: center;
-    color: white; /* texto branco para visibilidade */
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* sombra para destacar o texto */
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .esquerda-conteudo {
@@ -165,12 +167,6 @@ footer i:hover {
     align-items: flex-end;
 }
 
-/* Botão rotacionado quando ativado */
-.rotacao-botao {
-    transform: rotate(-90deg);
-    transform-origin: right center;
-}
-
 /* Inicialmente escondido */
 .opcoes-acessibilidade {
     margin-top: 10px;
@@ -178,7 +174,6 @@ footer i:hover {
     flex-direction: column;
 }
 
-/* Mostrar menu quando ativo */
 .opcoes-acessibilidade.ativa {
     display: flex;
 }
@@ -201,34 +196,58 @@ footer i:hover {
     color: #fff;
 }
 
-/* ALTO CONTRASTE - classe usada no JS: high-contrast */
+/* === ALTO CONTRASTE === */
 .high-contrast {
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
+    background-color: var(--alto-contraste-fundo) !important;
+    color: var(--alto-contraste-texto) !important;
 }
 
 .high-contrast header,
 .high-contrast footer,
 .high-contrast .formulario {
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
+    background-color: var(--alto-contraste-fundo) !important;
+    color: var(--alto-contraste-texto) !important;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
 }
 
+.high-contrast a,
 .high-contrast .nav-link {
-    color: var(--alto-contraste-link);
+    color: var(--alto-contraste-link) !important;
     text-decoration: underline;
 }
 
+.high-contrast a:hover,
+.high-contrast .nav-link:hover {
+    color: #0ff !important;
+}
+
+.high-contrast .card {
+    background-color: #111 !important;
+    color: #fff !important;
+    border: 2px solid #fff !important;
+}
+
+.high-contrast .btn,
 .high-contrast .botao-inicio,
 .high-contrast .formulario button,
 .high-contrast .btn-primary {
-    background-color: var(--alto-contraste-link);
-    color: var(--alto-contraste-fundo);
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 2px solid #000 !important;
+    font-weight: bold !important;
 }
 
-.high-contrast #galeria,
-.high-contrast .fundo-galeria {
-    background: none;
+.high-contrast .btn:hover {
+    background-color: #ff0 !important;
+    color: #000 !important;
+}
+
+.high-contrast .inicio-fundo {
+    background: none !important;
+    background-color: #000 !important;
+    color: #fff !important;
+    text-shadow: none !important;
 }
 
 /* Responsividade */
