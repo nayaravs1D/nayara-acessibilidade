@@ -2,128 +2,176 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Receitas Fitness - Site da Nayara Vieira</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Receitas Fitness - Site da Nayara Vieira</title>
 
-    <!-- Bootstrap e Ícones -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+  <!-- Bootstrap e Ícones -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
 
-    <!-- Seu CSS -->
-    <link rel="stylesheet" href="styles.css">
+  <!-- Seu CSS -->
+  <link rel="stylesheet" href="styles.css" />
 
-    <!-- Estilos básicos de acessibilidade -->
-    <style>
-        body {
-            font-size: 16px;
-            transition: all 0.2s ease;
-        }
+  <!-- Estilos de Acessibilidade -->
+  <style>
+    body {
+      font-size: 16px;
+      transition: all 0.2s ease;
+    }
 
-        .high-contrast {
-            background-color: #000 !important;
-            color: #fff !important;
-        }
+    .high-contrast {
+      background-color: #000 !important;
+      color: #fff !important;
+    }
 
-        .high-contrast a,
-        .high-contrast h1,
-        .high-contrast h2,
-        .high-contrast h3,
-        .high-contrast p,
-        .high-contrast li,
-        .high-contrast .btn {
-            color: #fff !important;
-            background-color: #222 !important;
-            border-color: #fff !important;
-        }
+    .high-contrast a,
+    .high-contrast h1,
+    .high-contrast h2,
+    .high-contrast h3,
+    .high-contrast p,
+    .high-contrast li,
+    .high-contrast .btn {
+      color: #fff !important;
+      background-color: #222 !important;
+      border-color: #fff !important;
+    }
 
-        .opcoes-acessibilidade {
-            display: none;
-        }
+    .opcoes-acessibilidade {
+      display: none;
+    }
 
-        .opcoes-acessibilidade.ativa {
-            display: flex;
-            gap: 0.5rem;
-            margin-top: 10px;
-        }
-    </style>
+    .opcoes-acessibilidade.ativa {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 
 <body>
-    <header class="p-5">
-        <nav class="container d-flex justify-content-between align-items-center">
-            <ul class="nav mt-5">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#receitas">Receitas</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-            </ul>
+  <header class="p-5">
+    <nav class="container d-flex justify-content-between align-items-center">
+      <ul class="nav mt-5">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#receitas">Receitas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
 
-            <!-- BOTÃO DE ACESSIBILIDADE FUNCIONAL -->
-            <div id="acessibilidade" class="menu-acessibilidade">
-                <button id="botao-acessibilidade" class="btn btn-primary fw-bold" aria-expanded="false">Acessibilidade</button>
-                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade">
-                    <button id="aumentar-fonte" class="btn btn-sm btn-secondary" aria-label="Aumentar fonte">A+</button>
-                    <button id="diminuir-fonte" class="btn btn-sm btn-secondary" aria-label="Diminuir fonte">A-</button>
-                    <button id="alterna-contraste" class="btn btn-sm btn-dark" aria-label="Ativar alto contraste"><i class="bi bi-shadows"></i></button>
-                </div>
+      <!-- Botão de Acessibilidade -->
+      <div id="acessibilidade" class="menu-acessibilidade">
+        <button id="botao-acessibilidade" class="btn btn-primary fw-bold" aria-expanded="false">Acessibilidade</button>
+        <div id="opcoes-acessibilidade" class="opcoes-acessibilidade">
+          <button id="aumentar-fonte" class="btn btn-sm btn-secondary">A+</button>
+          <button id="diminuir-fonte" class="btn btn-sm btn-secondary">A-</button>
+          <button id="alterna-contraste" class="btn btn-sm btn-dark"><i class="bi bi-shadows"></i></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+    <!-- Seção de Receitas Fitness -->
+    <section id="receitas" class="my-5">
+      <div class="container">
+        <h2 class="mb-4 text-center">Receitas Fitness da Nayara</h2>
+        <div class="row g-4">
+          <!-- Receita 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1613145996090-8d3e3eb1dcf9" class="card-img-top" alt="Salada de Quinoa com Abacate" />
+              <div class="card-body">
+                <h5 class="card-title">Salada de Quinoa com Abacate</h5>
+                <p class="card-text">Rica em proteínas e gorduras boas, ideal para uma refeição leve.</p>
+                <ul class="small">
+                  <li><strong>Ingredientes:</strong> Quinoa, abacate, tomate, pepino, azeite de oliva.</li>
+                  <li><strong>Modo de preparo:</strong> Cozinhe a quinoa e misture com os outros ingredientes.</li>
+                </ul>
+              </div>
             </div>
-        </nav>
-    </header>
+          </div>
 
-    <main class="container my-5">
+          <!-- Receita 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1584270354949-1f0eaa3ba361" class="card-img-top" alt="Panqueca de Aveia e Banana" />
+              <div class="card-body">
+                <h5 class="card-title">Panqueca de Aveia e Banana</h5>
+                <p class="card-text">Perfeita para o café da manhã saudável, com aveia e banana.</p>
+                <ul class="small">
+                  <li><strong>Ingredientes:</strong> Aveia, banana, ovo, mel, canela.</li>
+                  <li><strong>Modo de preparo:</strong> Bata os ingredientes e asse em frigideira antiaderente.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-        <!-- Seções (sem alteração) -->
-        <!-- ... MANTIDA IGUAL ... -->
+          <!-- Receita 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1604908177522-f6eabdc0b7a7" class="card-img-top" alt="Smoothie de Frutas Vermelhas" />
+              <div class="card-body">
+                <h5 class="card-title">Smoothie de Frutas Vermelhas</h5>
+                <p class="card-text">Refrescante, nutritivo e cheio de antioxidantes naturais.</p>
+                <ul class="small">
+                  <li><strong>Ingredientes:</strong> Morango, amora, iogurte natural, chia.</li>
+                  <li><strong>Modo de preparo:</strong> Bata tudo no liquidificador até ficar cremoso.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    </main>
+  <footer class="text-center p-3 fst-italic">
+    <p>Acesse nossas redes:</p>
+    <i class="bi bi-whatsapp"></i>
+    <i class="bi bi-instagram"></i>
+    <i class="bi bi-tiktok"></i>
+    <p class="mt-3">Desenvolvido por Nayara. Projeto fictício sem fins comerciais.</p>
+  </footer>
 
-    <footer class="text-center p-3 fst-italic">
-        <p>Acesse nossas redes:</p>
-        <i class="bi bi-whatsapp"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-tiktok"></i>
-        <p class="mt-3">Desenvolvido por Nayara. Projeto fictício sem fins comerciais.</p>
-    </footer>
+  <!-- JS ScrollReveal (opcional) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
 
-    <!-- ScrollReveal (mantido) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
+  <!-- JS de Acessibilidade -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const botaoAcessibilidade = document.getElementById("botao-acessibilidade");
+      const opcoes = document.getElementById("opcoes-acessibilidade");
+      const aumentarFonte = document.getElementById("aumentar-fonte");
+      const diminuirFonte = document.getElementById("diminuir-fonte");
+      const alternaContraste = document.getElementById("alterna-contraste");
 
-    <!-- JS para acessibilidade funcionando -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const botaoAcessibilidade = document.getElementById("botao-acessibilidade");
-            const opcoes = document.getElementById("opcoes-acessibilidade");
-            const aumentarFonte = document.getElementById("aumentar-fonte");
-            const diminuirFonte = document.getElementById("diminuir-fonte");
-            const alternaContraste = document.getElementById("alterna-contraste");
+      let fonteAtual = 16;
 
-            let fonteAtual = 16;
+      botaoAcessibilidade.addEventListener("click", function () {
+        opcoes.classList.toggle("ativa");
+        const expanded = botaoAcessibilidade.getAttribute("aria-expanded") === "true";
+        botaoAcessibilidade.setAttribute("aria-expanded", !expanded);
+      });
 
-            botaoAcessibilidade.addEventListener("click", function () {
-                opcoes.classList.toggle("ativa");
-                const expanded = botaoAcessibilidade.getAttribute("aria-expanded") === "true";
-                botaoAcessibilidade.setAttribute("aria-expanded", !expanded);
-            });
+      aumentarFonte.addEventListener("click", function () {
+        if (fonteAtual < 24) {
+          fonteAtual += 2;
+          document.body.style.fontSize = fonteAtual + "px";
+        }
+      });
 
-            aumentarFonte.addEventListener("click", function () {
-                if (fonteAtual < 24) {
-                    fonteAtual += 2;
-                    document.body.style.fontSize = fonteAtual + "px";
-                }
-            });
+      diminuirFonte.addEventListener("click", function () {
+        if (fonteAtual > 12) {
+          fonteAtual -= 2;
+          document.body.style.fontSize = fonteAtual + "px";
+        }
+      });
 
-            diminuirFonte.addEventListener("click", function () {
-                if (fonteAtual > 12) {
-                    fonteAtual -= 2;
-                    document.body.style.fontSize = fonteAtual + "px";
-                }
-            });
-
-            alternaContraste.addEventListener("click", function () {
-                document.body.classList.toggle("high-contrast");
-            });
-        });
-    </script>
+      alternaContraste.addEventListener("click", function () {
+        document.body.classList.toggle("high-contrast");
+      });
+    });
+  </script>
 </body>
 
 </html>
