@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let tamanhoFonte = 100;
 
-  // Abrir/fechar menu
+  // Mostrar/ocultar menu
   botaoMenu.addEventListener("click", () => {
     menuOpcoes.classList.toggle("ativa");
   });
@@ -29,9 +29,4 @@ document.addEventListener("DOMContentLoaded", function () {
   alternarContraste.addEventListener("click", () => {
     document.body.classList.toggle("high-contrast");
   });
-
-  // ScrollReveal opcional
-  if (typeof ScrollReveal !== "undefined") {
-    ScrollReveal().reveal("#receitas", { delay: 500 });
-  }
 });
