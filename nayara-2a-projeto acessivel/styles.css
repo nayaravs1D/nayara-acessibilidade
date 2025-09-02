@@ -5,15 +5,13 @@
     --laranja-claro: #ee1313;
     --marrom: #e24e0a;
     --fundo-claro: #FAF4F4;
-
-    /* Alto contraste */
     --alto-contraste-fundo: #000000;
     --alto-contraste-texto: #ffffff;
     --alto-contraste-link: #ffd700;
 }
 
 body {
-    font-size: 1rem; /* Fundamental para o JS de acessibilidade funcionar */
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     background-color: #fff;
@@ -39,7 +37,7 @@ header {
 
 /* SEÇÃO INICIAL */
 .inicio-fundo {
-    background-image: url('img/4965007.jpg');
+    background-image: url('../img/4965007.jpg');
     background-size: cover;
     background-position: right;
     border-radius: 2rem;
@@ -122,7 +120,7 @@ header {
 
 /* CONTATO */
 #contato {
-    background-image: url('img/4965007.jpg');
+    background-image: url('../img/4965007.jpg');
     background-size: cover;
     padding: 4rem 0;
 }
@@ -167,7 +165,6 @@ footer i:hover {
     align-items: flex-end;
 }
 
-/* Inicialmente escondido */
 .opcoes-acessibilidade {
     margin-top: 10px;
     display: none;
@@ -196,7 +193,7 @@ footer i:hover {
     color: #fff;
 }
 
-/* === ALTO CONTRASTE === */
+/* ALTO CONTRASTE */
 .high-contrast {
     background-color: var(--alto-contraste-fundo) !important;
     color: var(--alto-contraste-texto) !important;
@@ -207,47 +204,18 @@ footer i:hover {
 .high-contrast .formulario {
     background-color: var(--alto-contraste-fundo) !important;
     color: var(--alto-contraste-texto) !important;
-    border-top: 2px solid #fff;
-    border-bottom: 2px solid #fff;
 }
 
-.high-contrast a,
 .high-contrast .nav-link {
     color: var(--alto-contraste-link) !important;
     text-decoration: underline;
 }
 
-.high-contrast a:hover,
-.high-contrast .nav-link:hover {
-    color: #0ff !important;
-}
-
-.high-contrast .card {
-    background-color: #111 !important;
-    color: #fff !important;
-    border: 2px solid #fff !important;
-}
-
-.high-contrast .btn,
 .high-contrast .botao-inicio,
 .high-contrast .formulario button,
 .high-contrast .btn-primary {
-    background-color: #fff !important;
-    color: #000 !important;
-    border: 2px solid #000 !important;
-    font-weight: bold !important;
-}
-
-.high-contrast .btn:hover {
-    background-color: #ff0 !important;
-    color: #000 !important;
-}
-
-.high-contrast .inicio-fundo {
-    background: none !important;
-    background-color: #000 !important;
-    color: #fff !important;
-    text-shadow: none !important;
+    background-color: var(--alto-contraste-link) !important;
+    color: var(--alto-contraste-fundo) !important;
 }
 
 /* Responsividade */
