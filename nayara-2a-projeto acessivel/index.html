@@ -12,41 +12,6 @@
 
   <!-- Seu CSS -->
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Estilos de Acessibilidade -->
-  <style>
-    body {
-      font-size: 16px;
-      transition: all 0.2s ease;
-    }
-
-    .high-contrast {
-      background-color: #000 !important;
-      color: #fff !important;
-    }
-
-    .high-contrast a,
-    .high-contrast h1,
-    .high-contrast h2,
-    .high-contrast h3,
-    .high-contrast p,
-    .high-contrast li,
-    .high-contrast .btn {
-      color: #fff !important;
-      background-color: #222 !important;
-      border-color: #fff !important;
-    }
-
-    .opcoes-acessibilidade {
-      display: none;
-    }
-
-    .opcoes-acessibilidade.ativa {
-      display: flex;
-      gap: 0.5rem;
-      margin-top: 10px;
-    }
-  </style>
 </head>
 
 <body>
@@ -69,6 +34,16 @@
       </div>
     </nav>
   </header>
+
+  <!-- SEÇÃO INICIAL (imagem de fundo + texto + imagem direita) -->
+  <section id="inicio" class="inicio-fundo d-flex align-items-center">
+    <div class="esquerda-conteudo text-white p-4">
+      <h1 class="display-4">Receitas Fitness</h1>
+      <p>Delícias saudáveis para o seu dia a dia.</p>
+      <button class="botao-inicio btn btn-lg btn-primary">Confira as Receitas</button>
+    </div>
+    <img src="img/4965007.jpg" alt="Imagem de receitas" class="img-inicio" />
+  </section>
 
   <main class="container my-5">
     <!-- Seção de Receitas Fitness -->
