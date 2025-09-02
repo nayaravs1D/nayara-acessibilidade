@@ -4,18 +4,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Toggle de acessibilidade: mostrar/esconder opções e rotacionar botão
   botaoDeAcessibilidade.addEventListener('click', function () {
-    botaoDeAcessibilidade.classList.toggle('rotacao-botao');
-    opcoesDeAcessibilidade.classList.toggle('ativa'); // 'ativa' conforme CSS
+    botaoDeAcessibilidade.classList.toggle('rotacao-botao'); // se quiser animação no botão
+    opcoesDeAcessibilidade.classList.toggle('ativa'); // mostra/esconde o menu
 
-    const botaoSelecionado = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
-    botaoDeAcessibilidade.setAttribute('aria-expanded', !botaoSelecionado);
+    // Ajusta aria-expanded para acessibilidade
+    const estaExpandido = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
+    botaoDeAcessibilidade.setAttribute('aria-expanded', (!estaExpandido).toString());
   });
 
   const aumentaFonteBotao = document.getElementById('aumentar-fonte');
   const diminuiFonteBotao = document.getElementById('diminuir-fonte');
   const alternaContraste = document.getElementById('alterna-contraste');
 
-  let tamanhoAtualFonte = 1; // rem
+  // Pega o tamanho atual da fonte do body em rem, ou assume 1 se não estiver definido
+  let tamanhoAtualFonte = parseFloat(getComputedStyle(document.body).fontSize) / 16 || 1;
 
   // Aumenta o tamanho da fonte (limite 1.8rem)
   aumentaFonteBotao.addEventListener('click', function () {
@@ -33,16 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Alterna o contraste alto
+  // Alterna o contraste alto (ajuste a classe para a que você definiu no CSS)
   alternaContraste.addEventListener('click', function () {
-    document.body.classList.toggle('alto-contraste');
+    document.body.classList.toggle('high-contrast'); // use 'high-contrast' se seu CSS tem essa classe
   });
 
   // ScrollReveal — só executa se a função existir
   if (typeof ScrollReveal !== 'undefined') {
-    // Ajuste: IDs que existem no seu HTML: receitas, contato
     ScrollReveal().reveal('#receitas', { delay: 500 });
     ScrollReveal().reveal('#contato', { delay: 500 });
-    // Se quiser adicionar o header ou outro elemento, basta colocar aqui
   }
 });
