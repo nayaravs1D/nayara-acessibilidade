@@ -45,6 +45,8 @@ header {
     padding: 2rem;
     position: relative;
     overflow: hidden;
+    display: flex; /* Garantir flex para layout */
+    align-items: center;
 }
 
 .esquerda-conteudo {
@@ -64,6 +66,10 @@ header {
     border-radius: 30px;
     border: none;
     transition: transform 0.2s ease;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .botao-inicio:hover {
@@ -153,23 +159,40 @@ footer i:hover {
     z-index: 1000;
 }
 
+/* Botão rotacionado quando ativado */
 .rotacao-botao {
     transform: rotate(-90deg);
     transform-origin: right center;
 }
 
+/* Inicialmente escondido */
 .opcoes-acessibilidade {
     margin-top: 10px;
-    display: flex;
+    display: none;
     flex-direction: column;
+}
+
+/* Mostrar menu quando ativo */
+.opcoes-acessibilidade.ativa {
+    display: flex;
 }
 
 .opcoes-acessibilidade button {
     margin-bottom: 5px;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--marrom);
+    background-color: #fff;
+    color: var(--marrom);
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.apresenta-lista {
-    display: none;
+.opcoes-acessibilidade button:hover,
+.opcoes-acessibilidade button:focus {
+    background-color: var(--laranja-claro);
+    color: #fff;
 }
 
 /* ALTO CONTRASTE */
@@ -209,6 +232,7 @@ footer i:hover {
         align-items: center;
         text-align: center;
         padding: 2rem;
+        min-height: auto;
     }
 
     .esquerda-conteudo {
